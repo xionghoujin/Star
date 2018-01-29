@@ -24,9 +24,12 @@ public class CustomerServiceTest {
         //todo 初始化数据库
     }
     @Test
-    public void getCustomerListtest() throws Exception {
-        List<Customer> customersList = customerService.getCustomerList(null);
+    public void getCustomerListTest() throws Exception {
+        List<Customer> customersList = customerService.getCustomerList();
         Assert.assertEquals(2,customersList.size());
+        for (Customer customer:customersList) {
+            System.out.println(customer.toString());
+        }
     }
     @Test
     public void getCustomerTest() throws Exception {
